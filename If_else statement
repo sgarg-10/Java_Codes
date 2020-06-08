@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class cond
+ {
+     public static void main(String [] args)
+     {
+         Scanner cond = new Scanner(System.in);
+         int myint= cond.nextInt();
+          if(myint%2!=0)
+          {
+              System.out.println("Weird");
+          }
+          else if(myint>=2 && myint<5)
+          { 
+              System.out.println(" Not Weird");
+          }
+          else if(myint>=6 && myint<=20)
+          {
+              System.out.println("Weird");
+          }
+          else System.out.println("Not Weird");
+     }
+ }
