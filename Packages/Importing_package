@@ -1,0 +1,41 @@
+/* Write a program to make a package Balance. This has an Account class with Display_Balance method. 
+Import Balance package in another program to access Display_Balance method of Account class. */
+
+
+
+package balance;
+import java.io.*;
+public class account{
+	long acc,bal;
+	String name;
+	public void read()throws Exception{
+		DataInputStream in=new DataInputStream(System.in);
+		System.out.println("Enter the name :");
+		name=in.readLine();
+		System.out.println("Enter the account number :");
+		acc=Long.parseLong(in.readLine());
+		System.out.println("Enter the account balance :");
+		bal=Long.parseLong(in.readLine());
+	}
+	public void disp(){
+		System.out.println("  ");
+		System.out.println("--- Account Details ---");
+		System.out.println("  ");
+		System.out.println("Name :"+name);
+		System.out.println("Account number :"+acc);
+		System.out.println("Balance :"+bal);
+	}
+}
+import balance.*;
+class Main{
+	public static void main(String ar[]){
+		try{
+			balance.account a=new balance.account();
+			a.read();
+			a.disp();
+		}
+		catch(Exception e){ 
+			System.out.println(e); 
+		}
+	}
+}
