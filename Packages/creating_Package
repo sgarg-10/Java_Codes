@@ -1,0 +1,26 @@
+/* Write a Java program to implement the concept of importing classes from user defined package and created packages. */
+
+
+FILE 1: A.java:
+
+package pack;
+public class A
+{
+public void msg(){
+System.out.println("hello");
+}}
+
+
+
+FILE 2: B.java:
+
+package mypack;
+import pack.*;
+class B
+{
+public static void main(String[] args)
+{
+A obj = new A();
+obj.msg();
+}
+}
