@@ -1,6 +1,7 @@
 Write a program to launch 10 threads. Each thread increments a counter variable. Run the program with synchronization. 
 
 
+
 CODE:
 
 class Main
